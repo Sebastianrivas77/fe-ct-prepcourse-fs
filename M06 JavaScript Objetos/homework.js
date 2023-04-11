@@ -67,10 +67,10 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if (objetoUsuario.email =! null){
-      return true;
-   } else {
+   if (objetoUsuario.email == undefined){
       return false;
+   } else {
+      return true;
    }
 }
 
@@ -78,7 +78,8 @@ function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   var contiene = objeto.hasOwnProperty("propiedad");
+     
+   var contiene = objeto.hasOwnProperty(propiedad);
    return contiene;
 }
 
@@ -86,8 +87,8 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   var comp = objetoUsuario[password];
-   if (comp == objetoUsuario.password){
+   
+   if (password == objetoUsuario.password){
       return true;
    }
    else {
@@ -121,6 +122,10 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
+   for (var i= 0; i < objetoMuchosUsuarios.lenght; i++){
+     objetoMuchosUsuarios[i].esPremium = true;
+   }
+   return objetoMuchosUsuarios;
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
