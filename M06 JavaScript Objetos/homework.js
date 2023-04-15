@@ -105,23 +105,18 @@ function actualizarPassword(objetoUsuario, nuevaPassword) {
    return objetoUsuario;
    
 
+
+   
 }
 
 function agregarAmigo(objetoUsuario, nuevoAmigo) {
-   // El parámetro "objetoUsuario" tiene una propiedad llamada "amigos" igual a un arreglo.
-   // Debes agregar el "nuevoAmigo" al final de este arreglo.
-   // Retornar el objeto.
-   // Tu código:
+   
    objetoUsuario.amigos.push(nuevoAmigo);
    return objetoUsuario;
 }
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
-   // El parámetro "objetoMuchosUsuarios" es un arreglo de objetos (usuarios).
-   // Cada usuario tiene una propiedad llamada "esPremium".
-   // Define esta propiedad de todos los usuarios como true.
-   // Retornar el arreglo.
-   // Tu código:
+   
    for (var i= 0; i < objetoMuchosUsuarios.length; i++){
      objetoMuchosUsuarios[i].esPremium = true;
    }
